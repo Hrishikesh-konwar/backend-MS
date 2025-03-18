@@ -6,7 +6,7 @@ const authenticateUser = async (req, res, next) => {
 
   if (!token) res.status(401).send("Access Denied");
 
-  const JWT_TOKEN = process.env.JWT_TOKEN; //config.get("JWT_TOKEN") || "a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9t0";
+  const JWT_TOKEN = process.env.JWT_TOKEN || "a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9t0";
 
   try {
     const userData = jwt.verify(token, JWT_TOKEN);

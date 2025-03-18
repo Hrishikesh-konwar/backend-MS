@@ -22,7 +22,7 @@ const matchPassword = async (enteredPassword, hashedPassword) => {
 };
 
 const generateJwtToken = async(data)=>{
-    const JWT_TOKEN = process.env.JWT_TOKEN; ///config.get("JWT_TOKEN") || "a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9t0";
+    const JWT_TOKEN = process.env.JWT_TOKEN || "a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9t0";
     const token = jwt.sign(data, JWT_TOKEN);
     return token
 }
