@@ -13,9 +13,9 @@ app.use(express.json());
 
 require('./startup/prod')(app);
 
-mongoose.connect("mongodb://localhost:27017/nucleus") //process.env.MONGO_DB_URL)   //'mongodb://localhost:27017/nucleus')
-.then(()=> console.log("connected to MongoDb"))
-.catch(err=>console.log("Error connecting to MongoDb", err))
+// mongoose.connect("mongodb://localhost:27017/nucleus") //process.env.MONGO_DB_URL)   //'mongodb://localhost:27017/nucleus')
+// .then(()=> console.log("connected to MongoDb"))
+// .catch(err=>console.log("Error connecting to MongoDb", err))
 
 
 app.use('/api/v1',authenticateUser, v1Routes);
