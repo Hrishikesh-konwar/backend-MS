@@ -28,6 +28,10 @@ app.get('/health-check',(req,res)=>{
   })
 });
 
+app.use('/', (req,res)=>{
+  res.send("Welcome to Nebula")
+});
+
 const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => {
   console.log({
