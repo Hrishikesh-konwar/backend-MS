@@ -29,7 +29,7 @@ app.get('/health-check',(req,res)=>{
 });
 
 app.use('/', (req,res)=>{
-  res.send("Welcome to Nebula")
+  res.send("Welcome to Nebula, Lets Start")
 });
 
 const PORT = process.env.PORT || 8000;
