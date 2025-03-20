@@ -7,6 +7,7 @@ const v2Routes = require('./modules/v2/routes');
 const { authenticateUser } = require("./middleware/auth");
 const users = require('./modules/v2/users/routes/index');
 
+const PORT = process.env.PORT || 8000;
 
 const app = express();
 app.use(express.json());
@@ -29,10 +30,9 @@ app.get('/health-check',(req,res)=>{
 });
 
 app.use('/', (req,res)=>{
-  res.send("Welcome to Nebula, Lets Start Building")
+  res.send("Welcome to Nebula, Lets Start Building a Backend")
 });
 
-const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => {
   console.log({
     message: `Server is listening on ${PORT}!!!!!!!!!`,
